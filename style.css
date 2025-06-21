@@ -14,7 +14,12 @@ html, body {
     background: #ffffff;
 }
 
-#map {
+#message-map {
     height: 100%;
     width: 100%;
+}
+
+.message-dot {
+    fill: rgb(126, 216, 216);
+    stroke: rgb(0, 0, 0);
 }
