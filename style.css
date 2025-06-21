@@ -5,6 +5,16 @@ html, body {
     width: 100%;
 }
 
+#coord-display {
+    position: fixed;
+    background: white;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    padding: 4px 8px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
 #map-container {
     display: flex;
     justify-content: center;
