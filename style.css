@@ -15,6 +15,10 @@ html, body {
     z-index: 1000;
 }
 
+#coord-display.copied {
+    border-color: limegreen;
+}
+
 #map-container {
     display: flex;
     justify-content: center;
