@@ -1,13 +1,29 @@
-const messageMap = document.getElementById("message-map");
-const messageDotList = document.querySelectorAll(".message-dot");
-const coordDisplayEnabled = true;
+import { messages } from "./messageData.js";
 
-// Get messageMap's coordinates under the mouse cursor
+const messageMap = document.getElementById("message-map");
+const coordDisplayEnabled = false;
+
+// Displays a dot's message in the console
+function displayMessage(messageDot) {
+    console.log(messageDot.dataset.message);
+};
+
+// Darken a hex color. Used for dot stroke color
+function darkenHexColor(hex, factor = 0.7) {
+    if (!/^#([A-Fa-f0-9]{6})$/.test(hex)) return hex; // Validate hex format
+    const r = Math.floor(parseInt(hex.substr(1,2),16) * factor);
+    const g = Math.floor(parseInt(hex.substr(3,2),16) * factor);
+    const b = Math.floor(parseInt(hex.substr(5,2),16) * factor);
+    const toHex = v => v.toString(16).padStart(2, '0');
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+// Display messageMap's coordinates under the mouse cursor and allow copying them to clipboard
 if (coordDisplayEnabled) {
     // Creates a div in body for displaying coordinates
     const coordDisplay = document.createElement("div");
     coordDisplay.setAttribute("id", "coord-display");
-    coordDisplay.textContent = "x: 0, y: 0";
+    coordDisplay.textContent = "0,0";
     document.body.appendChild(coordDisplay);
     // Add event listener for mouse movement to update coordinates
     messageMap.addEventListener("mousemove", (event) => {
@@ -15,7 +31,7 @@ if (coordDisplayEnabled) {
         const mouseScreenPos = new DOMPoint(event.clientX, event.clientY);
         const mouseMapPos = mouseScreenPos.matrixTransform(messageMap.getScreenCTM().inverse());
         // Update coordinate display
-        coordDisplay.textContent = `x: ${Math.round(mouseMapPos.x)}, y: ${Math.round(mouseMapPos.y)}`;
+        coordDisplay.textContent = `${Math.round(mouseMapPos.x)},${Math.round(mouseMapPos.y)}`;
         coordDisplay.style.left = event.pageX + 10 + 'px';
         coordDisplay.style.top = event.pageY + 10 + 'px';
     });
@@ -34,15 +50,26 @@ if (coordDisplayEnabled) {
     });
 };
 
-// Adds event listener to all message dots to display message on click
-messageDotList.forEach(messageDot => {
-    messageDot.addEventListener("click", () => {
-        displayMessage(messageDot);
-    });
-});
+// Generates message dots on map from messageData.js
+messages.forEach(msg => {
+    // Parses coordinates from the format "x,y"
+    const [x,y] = msg.coordinates.split(",").map(Number);
 
-// TODO: Displays a dot's message
-function displayMessage(messageDot) {
-    console.log(messageDot);
-};
+    // Create SVG circle
+    const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    dot.setAttribute("cx", x);
+    dot.setAttribute("cy", y);
+    dot.setAttribute("class", "message-dot");
+    dot.setAttribute("fill", msg.dotColor);
+    dot.setAttribute("stroke", darkenHexColor(msg.dotColor));
+    dot.setAttribute("data-message", msg.message);
+
+    // Adds event listener to message dot to display message on click
+    dot.addEventListener("click", () => {
+        displayMessage(dot);
+    })
+
+    // Append the dot to the message map
+    messageMap.appendChild(dot);
+});
 
