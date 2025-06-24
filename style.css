@@ -57,6 +57,7 @@ html, body {
 
 #message-content {
     margin: 24px;
+    width: 100%;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 1.1em;
     color: #222;
