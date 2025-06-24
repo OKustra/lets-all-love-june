@@ -33,18 +33,19 @@ html, body {
 
 #map-container {
     display: flex;
-    flex: 1 1 80vw;
+    flex: 1 1 70vw;
     justify-content: center;
     align-items: center;
 }
 
 #message-panel {
     display: flex;
-    flex: 1 1 20vw;
+    flex: 1 1 30vw;
+    min-width: 200px;
     background: #f8f8f8;
     border-left: 1px solid #e0e0e0;
     overflow-y: scroll;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 /* Flexbox content end */
