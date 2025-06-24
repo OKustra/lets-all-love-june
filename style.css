@@ -3,11 +3,21 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.land {
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+    stroke: #262626;
+    fill: #eef1f6;
 }
 
 .message-dot {
     r: 5;
     stroke-width: 1;
+    cursor: pointer;
 }
 
 #coord-display {
@@ -24,7 +34,6 @@ html, body {
     border-color: limegreen;
 }
 
-/* Flexbox content start */
 #main-layout {
     display: flex;
     height: 100vh;
@@ -38,41 +47,79 @@ html, body {
     align-items: center;
 }
 
-#message-panel {
+#side-panel {
     display: flex;
     flex: 1 1 30vw;
     min-width: 200px;
-    background: #f8f8f8;
-    border-left: 1px solid #e0e0e0;
+    background: #eef1f6;
+    border-left: 1px solid;
+    border-color: #262626;
     overflow-y: scroll;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
 }
-/* Flexbox content end */
 
 #message-map {
     height: 100%;
     width: 100%;
 }
 
-#message-content {
-    margin: 24px;
+/* Side tab styling start */
+#side-tabs {
+    display: flex;
     width: 100%;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 1.1em;
-    color: #222;
-    white-space: pre-line;
+    border-bottom: 1px solid #aaa;
+    background: #e0e7f3;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
 }
+
+#tab-contents {
+    width: 100%;
+}
+
+#side-tabs .tab {
+    flex: 1 1 0;
+    padding: 12px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, border-bottom 0.2s;
+}
+
+#side-tabs .tab.active {
+    border-bottom: 2px solid #262626;
+    background: #f6f9ff;
+    font-weight: bold;
+}
+
+.tab-pane {
+    display: none;
+    padding: 24px;
+    width: auto;
+    font-size: 1.1em;
+    color: #262626;
+}
+
+.tab-pane.active {
+    display: block;
+}
+/* Side tab styling end */
 
 @media (orientation: portrait) {
     #main-layout {
         flex-direction: column;
     }
 
-    #message-panel {
+    #side-panel {
         flex: 0 1 40vh;
         border-left: none;
-        border-top: 1px solid #e0e0e0;
+        border-top: 1px solid;
     }
 
     .message-dot {

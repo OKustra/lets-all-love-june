@@ -1,8 +1,7 @@
 import { messages } from "./messageData.js";
 
 const messageMap = document.getElementById("message-map");
-const messagePanel = document.getElementById("message-panel");
-const messageContent = document.getElementById("message-content");
+const messageContent = document.getElementById("message-pane");
 const coordDisplayEnabled = false;
 
 // Displays a dot's message in the message panel
@@ -72,9 +71,24 @@ messages.forEach(msg => {
     // Adds event listener to message dot to display message on click
     dot.addEventListener("click", () => {
         displayMessage(dot);
-    })
+    });
 
     // Append the dot to the message map
     messageMap.appendChild(dot);
 });
 
+// Tab switching logic
+document.querySelectorAll("#side-tabs .tab").forEach(tabBtn => {
+    tabBtn.addEventListener("click", () => {
+        // Remove active from all tabs and panes
+        document.querySelectorAll("#side-tabs .tab").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll("#tab-contents .tab-pane").forEach(pane => pane.classList.remove("active"));
+
+        console.log(tabBtn);
+
+        // Activate this tab and it's pane
+        tabBtn.classList.add("active");
+        const tabId = tabBtn.getAttribute("data-tab");
+        document.getElementById(tabId).classList.add("active");
+    });
+});
