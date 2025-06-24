@@ -44,8 +44,6 @@ html, body {
     background: #f8f8f8;
     border-left: 1px solid #e0e0e0;
     overflow-y: scroll;
-    justify-content: center;
-    align-items: flex-start;
 }
 /* Flexbox content end */
 
