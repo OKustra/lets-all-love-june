@@ -5,6 +5,11 @@ html, body {
     width: 100%;
 }
 
+.message-dot {
+    r: 5;
+    stroke-width: 1;
+}
+
 #coord-display {
     position: fixed;
     background: white;
@@ -19,20 +24,57 @@ html, body {
     border-color: limegreen;
 }
 
-#map-container {
+/* Flexbox content start */
+#main-layout {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
-    background: #ffffff;
 }
+
+#map-container {
+    display: flex;
+    flex: 1 1 80vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#message-panel {
+    display: flex;
+    flex: 1 1 20vw;
+    background: #f8f8f8;
+    border-left: 1px solid #e0e0e0;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Flexbox content end */
 
 #message-map {
     height: 100%;
     width: 100%;
 }
 
-.message-dot {
-    r: 5;
+#message-content {
+    margin: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1.1em;
+    color: #222;
+    white-space: pre-line;
+}
+
+@media (orientation: portrait) {
+    #main-layout {
+        flex-direction: column;
+    }
+
+    #message-panel {
+        flex: 0 1 40vh;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .message-dot {
+        r: 10;
+        stroke-width: 2;
+    }
 }

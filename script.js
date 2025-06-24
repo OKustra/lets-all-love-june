@@ -1,11 +1,15 @@
 import { messages } from "./messageData.js";
 
 const messageMap = document.getElementById("message-map");
+const messagePanel = document.getElementById("message-panel");
+const messageContent = document.getElementById("message-content");
 const coordDisplayEnabled = false;
 
-// Displays a dot's message in the console
+// Displays a dot's message in the message panel
 function displayMessage(messageDot) {
-    console.log(messageDot.dataset.message);
+    const friendName = messageDot.dataset.friendName;
+    const message = messageDot.dataset.message;
+    messageContent.innerHTML = `<strong>${friendName}</strong><br><br>${message.replace(/\n/g, "<br>")}`;
 };
 
 // Darken a hex color. Used for dot stroke color
@@ -62,6 +66,7 @@ messages.forEach(msg => {
     dot.setAttribute("class", "message-dot");
     dot.setAttribute("fill", msg.dotColor);
     dot.setAttribute("stroke", darkenHexColor(msg.dotColor));
+    dot.setAttribute("data-friend-name", msg.friendName)
     dot.setAttribute("data-message", msg.message);
 
     // Adds event listener to message dot to display message on click
