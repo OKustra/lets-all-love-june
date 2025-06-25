@@ -12,7 +12,7 @@ export const messages = [
     "friendName": "judd",
     "message": "i think weve been friends for almost a decade now. which is crazy to think about since we didnt go to school together. that being said youve done so much for me by just being my friend and supporting me when i needed it. i hope we can continue to be friends until one of us dies. also move to seattle already",
     "dotColor": "#581876",
-    "coordinates": "178,261",
+    "coordinates": "181,263",
     "songIds": 3
   },
   {
@@ -28,14 +28,14 @@ export const messages = [
     "friendName": "Jamison",
     "message": "June, you've always been a great friend to me, and I appreciate you as you are. Thank you for always been sweet and funny, and thank you for tolerating me when you, Oliver, and I play risk of rain 2 and helldivers. :) I hope that you enjoy your birthday, and know that Corey, illeana, and I think of about you every day and wish you all the happiness in the world.",
     "dotColor": "#FF4500",
-    "coordinates": "593,355"
+    "coordinates": "593,359"
   },
   {
     "id": 5,
     "friendName": "Saraisa",
     "message": "Muhahaha I wrote a poem, love you Junebug",
     "dotColor": "#DB7093",
-    "coordinates": "264,423",
+    "coordinates": "265,428",
     "songIds": 5
   },
   {
@@ -48,9 +48,9 @@ export const messages = [
   {
     "id": 7,
     "friendName": "Aster",
-    "message": "June!!! Happy solar return! You are a beautiful warm light in this sometimes dull world, and your love for your friends, your family and your passions is ever inspiring. You have this very special ability to bring people together; it doesn’t seem to matter the differences or distance, your friendship and attention to detail is unwavering. You have created such a welcoming, loving and supportive community, with your wonderful soul seemingly right smack in the middle. You are magnetic, and it goes to show just how blessed each and every one of us is to know June 🫶🏼",
+    "message": "June!!! Happy solar return! You are a beautiful warm light in this sometimes dull world, and your love for your friends, your family and your passions is ever inspiring. You have this very special ability to bring people together; it doesn’t seem to matter the differences or distance, your friendship and attention to detail is unwavering. You have created such a welcoming, loving and supportive community, with your wonderful soul seemingly right smack in the middle. You are magnetic, and it goes to show just how blessed each and every one of us is to know June 💚✨",
     "dotColor": "#2E8B57",
-    "coordinates": "287,445",
+    "coordinates": "284,445",
     "songIds": 6
   },
   {
@@ -65,7 +65,7 @@ export const messages = [
     "friendName": "Israel",
     "message": "Happy Birthday bestie!!! It’s been awesome being able to hang out with you more with season of ghosts and random discord calls. Can’t wait to do that more in person one day soon!",
     "dotColor": "#3563F0",
-    "coordinates": "269,441",
+    "coordinates": "271,440",
     "songIds": 7
   },
   {
@@ -94,16 +94,17 @@ export const messages = [
   {
     "id": 13,
     "friendName": "mars:3(victor cockenball)",
-    "message": "JUNE!!!!! OMG happiest of birthdays to you!! i feel to privileged to be your friend and be part of the community you’ve created!! you are one of the kindest most understanding people i know and I hope you are having the best day ever !!!-mars:3(victor cockenball)",
+    "message": "JUNE!!!!! OMG happiest of birthdays to you!! i feel to privileged to be your friend and be part of the community you’ve created!! you are one of the kindest most understanding people i know and I hope you are having the best day ever !!!",
     "dotColor": "#6B8E23",
-    "coordinates": "643,334"
+    "coordinates": "643,334",
+    "songIds": 24
   },
   {
     "id": 14,
-    "friendName": "Wil/ Wilheiminplatz",
+    "friendName": "Wil/Wilheiminplatz",
     "message": "Happy Birthday!! hope you have a great day",
     "dotColor": "#7FFFD4",
-    "coordinates": "694,503",
+    "coordinates": "695,503",
     "songIds": 10
   },
   {
@@ -134,14 +135,14 @@ export const messages = [
     "friendName": "Will",
     "message": "Happy birthday, June! You've been a good friend over all these years (!?) online, and I hope you have a great day.",
     "dotColor": "#0F5F58",
-    "coordinates": "394,465"
+    "coordinates": "414,450"
   },
   {
     "id": 19,
     "friendName": "Jnathan/Jorn",
-    "message": "Hey June! Fun fact: I met you and Eli on the same night in discord. This is my favorite fun fact because that led to me meeting so many fun individuals. It also led to you and Oliver coming for Thomas's wedding!! So, on your birthday, I thank you for the gift of friendship for all of these years. Love you bestie 💜\n\nJorn , Jnathan, John",
+    "message": "Hey June! Fun fact: I met you and Eli on the same night in discord. This is my favorite fun fact because that led to me meeting so many fun individuals. It also led to you and Oliver coming for Thomas's wedding!! So, on your birthday, I thank you for the gift of friendship for all of these years. Love you bestie 💜",
     "dotColor": "#663399",
-    "coordinates": "439,340",
+    "coordinates": "441,339",
     "songIds": 16
   },
   {
@@ -165,7 +166,7 @@ export const messages = [
     "friendName": "Logsto",
     "message": "At some point while speaking to you and listening to you talk among us, I was very surprised by how genuine and kind you came across to me. Then after a while... I was hit by a freight train. I don't remember what it was that you said, but I swear I had whiplash. I was consistently caught off guard by the things you said. I never knew how to respond, but I can say I learned something new, multiple times. I do miss you guys. Thanks again for inviting me to friends giving. I hope you birthday turns out well.\n\nHappy Birthday, June.",
     "dotColor": "#E95420",
-    "coordinates": "423,382",
+    "coordinates": "422,383",
     "songIds": 19
   },
   {
@@ -181,7 +182,51 @@ export const messages = [
     "friendName": "Desi 🥰😍😘",
     "message": "HAPPY BIRTHDAY JUNE!!! I MISS YOU AND I HOPE YOU HAVE A VERY FUN DAY!! I HOPE WE GET TO PLAY A GAME TOGETHER!!",
     "dotColor": "#6495ED",
-    "coordinates": "412,378",
+    "coordinates": "420,371",
     "songIds": 21
+  },
+  {
+    "id": 25,
+    "friendName": "Darby",
+    "message": "June seems like the sort of person that everyone is better off for meeting. They have been warm and kind and delightful to be around in all my interactions with them. I hope they have a wonderful birthday!!!",
+    "dotColor": "#ce0239",
+    "coordinates": "430,392"
+  },
+  {
+    "id": 26,
+    "friendName": "eli :3",
+    "message": "Happy Birthday June!!!!!! You're such a rad person, and I am very thankful to be able to call you a friend for almost 10 years now B) I hope this next year brings you much happiness, Big Stacks, and some great memories.",
+    "dotColor": "#42f598",
+    "coordinates": "507,410"
+  },
+  {
+    "id": 27,
+    "friendName": "gin <3",
+    "message": "HAPPY BIRTHDAY!!!!!! i can’t wait for the day i get undeported and can actually spend more time with you lmao you’re so sweet and silly and full of whimsy in your heart, and always know how to cheer people up even if maybe you’re not having the brightest day yourself. you really light up a room (or discord call in most of my cases lol), whether it’s with fun jokes or simply existing. love ya lots <3",
+    "dotColor": "#959778",
+    "coordinates": "351,581",
+    "songIds": 22
+  },
+  {
+    "id": 28,
+    "friendName": "Nick!",
+    "message": "HAPPY BIRTHDAY JUNE I HOPE YOUR DAY IS FANTASTIC :D",
+    "dotColor": "#a633ff",
+    "coordinates": "624,368",
+  },
+  {
+    "id": 29,
+    "friendName": "Trai!",
+    "message": "HAPPY BIRFDAY JUNE! YOU’RE SO COOL I’M SO GRATEFUL THAT I GOT TO MEET YALL AND BE FRIENDS! I really admire your creativity and empathy, It’s no surprise that you have such a vast collection of friends from different backgrounds that flock to you and form these communities around you. You make spaces feel welcoming and meaningful just by being in them. I’m lucky to know you.\n\nKick Oliver in the head for me pls",
+    "dotColor": "#2485c9",
+    "coordinates": "407,478",
+    "songIds": 23
+  },
+  {
+    "id": 30,
+    "friendName": "Thomas",
+    "message": "June it's been such a long time. Feels like we've been friends for as long as I can remember.\n\nI really appreciate you in my life! You are truly the only other person I've met who really seriously gets friendship. I see you. You work very hard at nurturing your community and that effort is something truly special. I've always admired and looked up to you for all of the care and heart you put into how you interact with the people around you.\n\nYou keep friendship well.\n\nYou're the kind of friend that everyone wants and the kind of friend everyone wants to be more like.\n\nHappy Birthday June!\n\n🥳☺️🥰🥳😁\n\nI hope today is the best day ever 🤗\n\nYou're forever and always welcome at our house. We hope you find your way back to Iowa for a visit someday 😋",
+    "dotColor": "#e5a81e",
+    "coordinates": "454,337"
   }
 ]

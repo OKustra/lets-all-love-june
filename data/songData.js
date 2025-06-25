@@ -19,5 +19,8 @@ export const songIdToName = {
     18: "Ievan Polkka - Hatsune Miku",
     19: "Sandstorm - Darude",
     20: "Thank You for Being a Friend - Cynthia Fee",
-    21: "Everything is Boring - The Beaches"
+    21: "Everything is Boring - The Beaches",
+    22: "Sister Golden Hair - America",
+    23: "Anything - Adrianne Lenker",
+    24: "Alaska - Pinegrove"
 }
