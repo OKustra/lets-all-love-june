@@ -97,7 +97,7 @@ messages.forEach(msg => {
     const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     dot.setAttribute("cx", x);
     dot.setAttribute("cy", y);
-    dot.setAttribute("class", "message-dot");
+    dot.setAttribute("class", "message-dot unclicked");
     dot.setAttribute("fill", msg.dotColor);
     dot.setAttribute("stroke", darkenHexColor(msg.dotColor));
     dot.setAttribute("data-friend-name", msg.friendName)
@@ -115,6 +115,7 @@ messages.forEach(msg => {
             addSongs(songList);
         }
         dot.dataset.previouslyClicked = true;
+        dot.classList.remove("unclicked");
     });
 
     // Append the dot to the message map

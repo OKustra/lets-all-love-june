@@ -18,6 +18,12 @@ html, body {
     r: 5;
     stroke-width: 1;
     cursor: pointer;
+    transition: fill 2.5s, stroke 2.5s;
+}
+
+.message-dot.unclicked {
+    fill: rgb(123, 128, 138);
+    stroke: rgb(86, 90, 97)
 }
 
 .tab-content {
