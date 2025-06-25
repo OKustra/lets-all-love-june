@@ -132,18 +132,16 @@
         </div>
         <div id="side-panel">
             <div id="side-tabs">
-                <button class="tab active" data-tab="message-pane">Messages</button>
-                <button class="tab" data-tab="music-pane"">Music</button>
+                <button id="message-tab" class="tab active" data-tab="message-content">Messages</button>
+                <button id="music-tab" class="tab hidden" data-tab="music-content"">Music</button>
             </div>
-            <div id="tab-contents">
-                <div id="message-pane" class="tab-pane active">
-                    <p style="color: #888; text-align: center;">Click a dot to see a message!</p>
+            <div id="tab-content-container">
+                <div id="message-content" class="tab-content active">
+                    <p style="color: #262626; opacity: 40%; text-align: center;">Click a dot to see a message!</p>
                 </div>
-                <div id="music-pane" class="tab-pane">
-                    <strong>Music Content In HTML</strong>
-                    <br>
-                    <br>
-                    more content
+                <div id="music-content" class="tab-content">
+                    <strong>Tracks From Friends</strong>
+                    <ul id="track-list"></ul>
                 </div>
             </div>
         </div>
