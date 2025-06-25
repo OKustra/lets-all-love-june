@@ -1,4 +1,23 @@
 export const songIdToName = {
     1: "Teenage Dirtbag - Wheatus",
-    2: "Tem Shop - Toby Fox, Undertale OST"
+    2: "Tem Shop - Toby Fox, Undertale OST",
+    3: "Art School - Remo Drive",
+    4: "Trust Fall - Cowgirl Clue",
+    5: "This Must Be the Place - The Talking Heads",
+    6: "Enjoy Right Now, Today - Tyler, The Creator",
+    7: "What I'm Made Of... - Sonic X Shadow Generations OST",
+    8: "Unwritten - Natasha Bedingfield",
+    9: "Back on 74 - Jungle, re: Fortnite",
+    10: "Dive In - Pierce the Veil, re: Besties Twilight arc",
+    11: "Roddy - Djo",
+    12: "Night Shift - Lucy Dacus",
+    13: "Rich Girl - Daryl Hall & John Oates",
+    14: "Kingston - Faye Webster",
+    15: "Black Sheep - Metric, (Brie Larson ver.)",
+    16: "Fireflies - Owl City",
+    17: "Shamisen Hunter - Satxri",
+    18: "Ievan Polkka - Hatsune Miku",
+    19: "Sandstorm - Darude",
+    20: "Thank You for Being a Friend - Cynthia Fee",
+    21: "Everything is Boring - The Beaches"
 }
