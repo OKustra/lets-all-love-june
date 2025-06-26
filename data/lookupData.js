@@ -24,3 +24,7 @@ export const songIdToName = {
     23: "Anything - Adrianne Lenker",
     24: "Alaska - Pinegrove"
 }
+
+export const charIdLookup = {
+
+}

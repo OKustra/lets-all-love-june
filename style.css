@@ -38,6 +38,19 @@ html, body {
     display: block;
 }
 
+#gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 0;   /* flex box grows from 0 to fill up space */
+}
+
 .hidden {
     display: none;
 }
@@ -87,7 +100,6 @@ html, body {
     width: 100%;
 }
 
-/* Side tab styling start */
 #side-tabs {
     display: flex;
     width: 100%;

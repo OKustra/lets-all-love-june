@@ -1,5 +1,5 @@
 import { messages } from "./data/messageData.js";
-import { songIdToName } from "./data/songData.js";
+import { songIdToName } from "./data/lookupData.js";
 
 const messageMap = document.getElementById("message-map");
 const messageContent = document.getElementById("message-content");
