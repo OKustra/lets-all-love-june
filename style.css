@@ -23,7 +23,7 @@ html, body {
 
 .message-dot.unclicked {
     fill: rgb(191, 198, 212);
-    stroke: rgb(86, 90, 97)
+    stroke: rgb(86, 90, 97);
 }
 
 .tab-content {

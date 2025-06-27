@@ -181,7 +181,7 @@ export const messages = [
     "id": 24,
     "friendName": "Desi 🥰😍😘",
     "message": "HAPPY BIRTHDAY JUNE!!! I MISS YOU AND I HOPE YOU HAVE A VERY FUN DAY!! I HOPE WE GET TO PLAY A GAME TOGETHER!!",
-    "dotColor": "#6495ED",
+    "dotColor": "#5DA7A8",
     "coordinates": "420,371",
     "songIds": 21
   },
