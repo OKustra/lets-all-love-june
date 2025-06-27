@@ -1,10 +1,13 @@
 import { messages } from "./data/messageData.js";
 import { songIdToName } from "./data/lookupData.js";
+import { characterIdToImgURL } from "./data/lookupData.js";
 
 const messageMap = document.getElementById("message-map");
 const messageContent = document.getElementById("message-content");
 const musicTab = document.getElementById("music-tab");
+const characterTab = document.getElementById("character-tab");
 const trackList = document.getElementById("track-list");
+const galleryColumns = document.querySelectorAll(".gallery-column");
 const coordDisplayEnabled = false;
 
 // Displays a dot's message in the message panel
@@ -44,6 +47,43 @@ function addSongs(songIds) {
 
         trackList.appendChild(songItem);
     });
+}
+
+// Helper function to add characters to character content
+function addCharacters(characterIds) {
+    characterTab.classList.remove("hidden");
+
+    characterIds.forEach(id => {
+        const characterImg = document.createElement("img");
+        characterImg.setAttribute("src", characterIdToImgURL[id]);
+
+        currentShortestColumn().appendChild(characterImg);
+    });
+}
+
+// Helper function to find current shortest column
+function currentShortestColumn() {
+    let shortestColumn = galleryColumns[0];
+
+    galleryColumns.forEach(column => {
+        if (getGalleryColumnHeight(column) < getGalleryColumnHeight(shortestColumn)) { shortestColumn = column }
+    });
+
+    return shortestColumn;
+}
+
+// Measure the height of a gallery column, even if it has no height, like with "display: none"
+// This works by cloning the element, measuring the clone, then deleting the clone
+function getGalleryColumnHeight(column) {
+    const clone = column.cloneNode(true);
+    clone.style.display = 'block';
+    clone.style.visibility = 'hidden';
+    clone.style.position = 'absolute';
+    clone.style.left = '-9999px';
+    document.body.appendChild(clone);
+    const height = clone.offsetHeight;
+    document.body.removeChild(clone);
+    return height;
 }
 
 // Darken a hex color. Used for dot stroke color
@@ -103,18 +143,29 @@ messages.forEach(msg => {
     dot.setAttribute("data-friend-name", msg.friendName)
     dot.setAttribute("data-message", msg.message);
     dot.setAttribute("data-previously-clicked", false); // Changed to true on first click
-    if (msg.songIds) {
+    if (msg.songIds != undefined) {
         dot.setAttribute("data-song-ids", msg.songIds);
+    }
+    if (msg.characterIds != undefined) {
+        dot.setAttribute("data-character-ids", msg.characterIds);
     }
 
     // Adds event listener to message dot to display message on click
     dot.addEventListener("click", () => {
+        // Display the message from dot's dataset
         displayMessage(dot);
+        // Add song(s) from dot's dataset
         if ((dot.dataset.previouslyClicked == "false") && (dot.dataset.songIds)) {
             const songList = dot.dataset.songIds.split(",");
             addSongs(songList);
         }
-        dot.dataset.previouslyClicked = true;
+        // Add character(s) from dot's dataset
+        if ((dot.dataset.previouslyClicked == "false") && (dot.dataset.characterIds)) {
+            const characterList = dot.dataset.characterIds.split(",");
+            addCharacters(characterList);
+        }
+        // Mark the dot as clicked for future logic and to avoid duplicates
+        dot.dataset.previouslyClicked = "true";
         dot.classList.remove("unclicked");
     });
 

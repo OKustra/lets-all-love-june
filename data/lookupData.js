@@ -25,6 +25,6 @@ export const songIdToName = {
     24: "Alaska - Pinegrove"
 }
 
-export const charIdLookup = {
-
+export const characterIdToImgURL = {
+    // 1: "image/princessbubblegum.png",
 }
