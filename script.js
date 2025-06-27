@@ -1,6 +1,6 @@
 import { messages } from "./data/messageData.js";
 import { songIdToName } from "./data/lookupData.js";
-import { characterIdToImgURL } from "./data/lookupData.js";
+import { characterIdLookup } from "./data/lookupData.js";
 
 const messageMap = document.getElementById("message-map");
 const messageContent = document.getElementById("message-content");
@@ -54,20 +54,41 @@ function addCharacters(characterIds) {
     characterTab.classList.remove("hidden");
 
     characterIds.forEach(id => {
-        const characterImg = document.createElement("img");
-        characterImg.setAttribute("src", characterIdToImgURL[id]);
+        const characterName = characterIdLookup[id].name;
+        const imageURLs = characterIdLookup[id].imageURLs;
 
-        currentShortestColumn().appendChild(characterImg);
+        imageURLs.forEach(url => {
+            const characterImg = document.createElement("img");
+            characterImg.setAttribute("src", url);
+            characterImg.setAttribute("title", characterName);
+            currentShortestColumn().appendChild(characterImg);
+        });
     });
 }
 
 // Helper function to find current shortest column
+// DEBUG: Something is broken here. Images are not being put in the proper columns
 function currentShortestColumn() {
     let shortestColumn = galleryColumns[0];
 
     galleryColumns.forEach(column => {
+        // DEBUG
+        console.log(`column: Column id, ${column.getAttribute("id")} ... height, ${getGalleryColumnHeight(column)}):`);
+        console.log(`shortestColumn: Column id, ${shortestColumn.getAttribute("id")} ... height, ${getGalleryColumnHeight(shortestColumn)}):`);
+
         if (getGalleryColumnHeight(column) < getGalleryColumnHeight(shortestColumn)) { shortestColumn = column }
+
+        // DEBUG
+        console.log(`Post-if shortest column: ${shortestColumn.getAttribute("id")}`);
+        console.log("");
     });
+
+    // DEBUG
+    console.log("currentShortestColumn returns:");
+    console.log(shortestColumn);
+    console.log("");
+    console.log("-----------------------------------------------------------------------------------");
+    console.log("");
 
     return shortestColumn;
 }
