@@ -273,7 +273,9 @@ export const messages = [
     "friendName": "Audy",
     "message": "Happy Birthday June! I know it's been rough lately but I think 25 is going to be a great year. I hope it's full of new memories with friends, quality time with animals, great movies, d&d adventures, art of your favorite characters, silly games, delicious food, and adventures with Oliver.",
     "dotColor": "#d62b51",
-    "coordinates": "292,432"
+    "coordinates": "292,432",
+    "songIds": [25, 26],
+    "characterIds": 27
   },
   {
     "id": 35,
@@ -294,35 +296,44 @@ export const messages = [
     "friendName": "Travioli aka Doctor Scrange aka Meechiolio aka Meech aka Travi aka me",
     "message": "Hi June!!! Habby Birthdayyy I hope its a really special one :D Thank you for existing and being one of my closest friends and always planning awesome trips or parties <3 You are the best I can't wait to see you! <3",
     "dotColor": "#fbdaa6",
-    "coordinates": "278,429"
+    "coordinates": "278,429",
+    "songIds": 27,
+    "characterIds": 28
   },
   {
     "id": 38,
     "friendName": "Pingy",
     "message": "HI BESTIE... Happy birthday I am so grateful you are my friend and so grateful you are on this earth!!! You are a source of comfort in hard times and a fun friend in good times. I hope your birthday is absolutely awesome and I hope you party rock like crazy. Take a shot for the slime squad #slimerforlife #slimesquad4ever noot noot",
     "dotColor": "#9506db",
-    "coordinates": "525,323"
+    "coordinates": "525,323",
+    "songIds": [28, 29, 30],
+    "characterIds": 29
   },
   {
     "id": 39,
     "friendName": "Avery",
     "message": "Hi June! Happy Birthday!! I hope you’re doing good! We miss you!! It is such an honor to know you and to be a friend of yours 💛 you are a really wonderful person 💖🪲",
     "dotColor": "#24E7C1",
-    "coordinates": "413,395"
+    "coordinates": "413,395",
+    "songIds": 31
   },
   {
     "id": 40,
     "friendName": "August",
     "message": "Happy birthday Junebug! You are one of my best friends and I feel so lucky to have met and connected with you. You were my first new friend I made as an adult that stuck. I hope you know how much of a positive impact you have on the people around you. To be cared about by you is a privilege. Thank you for being so thoughtful and dedicated. I love you and hope you have a wonderful day and year!",
     "dotColor": "#668851",
-    "coordinates": "408,384"
+    "coordinates": "408,384",
+    "songIds": 32,
+    "characterIds": 30
   },
   {
     "id": 41,
     "friendName": "Oliver 🦝",
     "message": "Hello Love,\n\nSince we have moved to Vegas I have seen you struggle with feelings of isolation and disconnection. I started this project to help you remember that your friends all over the country and beyond love and care about you. I probably could have just sent you a collage or something similar but I want to believe the visual representation of seeing where your friends are, and the colors they represent, have a meaning beyond that which could be conveyed with a slideshow.\n\nI hope this idea is conveyed to you in the way I originally envisioned. And I hope that my effort and love, along with the love of everyone who contributed, is reflected here. Even though I would have liked to do a lot more with this web page lol. There was even more in each response that I wish I could have fully included in this project. I have been provided with half-decade old videos from iCloud, funny memes, recipes, book recommendations, and more that people want to share with you. I can't wait to show you all of it.\n\nYou are the most incredible person I have ever met. I am grateful every day for the ways you support me. You have the kind of magnetic personality that draws people to you. And I am grateful for all the wonderful connections and rich friendships you have helped me to foster. I want you to know that we are not alone in Vegas. Love is truly all around you, and I want you to see the way our friends and I see you.\n\nHappy Birthday, June. I love you more than yesterday and less than tomorrow, and I can't wait to spend the rest of my life with you. <3\n\nP.S. Hope you like the cake!",
     "dotColor": "#699B72",
-    "coordinates": "243,404"
+    "coordinates": "243,404",
+    "songIds": [33, 34, 35],
+    "characterIds": [7, 9, 6, 31, 32]
   },
   {
     "id": 42,

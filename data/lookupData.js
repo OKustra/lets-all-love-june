@@ -22,7 +22,18 @@ export const songIdToName = {
     21: "Everything is Boring - The Beaches",
     22: "Sister Golden Hair - America",
     23: "Anything - Adrianne Lenker",
-    24: "Alaska - Pinegrove"
+    24: "Alaska - Pinegrove",
+    25: "Look At The Sky - Porter Robinson",
+    26: "Unfold - Porter Robinson",
+    27: "Yoshi's Story Soundtrack - Yo-Yo-Yoshi!",
+    28: "Confirmation - Westerman",
+    29: "Freedom 90' - George Michael",
+    30: "Luv(sic) pt 3 - Nujabes",
+    31: "PoPiPo - Hatsune Miku",
+    32: "Chateau (Feel Alright) - Djo",
+    33: "Anyone Else But You - Moldy Peaches",
+    34: "Bless the Telephone - Labi Siffre",
+    35: "Acolyte - Slaughter Beach, Dog"
 }
 
 export const characterIdLookup = {
@@ -35,7 +46,6 @@ export const characterIdLookup = {
     2: { name: "Arietty (Secret World of Arriety)",
         imageURLs: [
             "images/arietty.gif",
-            "images/arietty.jpg",
             "images/arietty2.gif"
         ]
     },
@@ -50,16 +60,13 @@ export const characterIdLookup = {
     4: { name: "Cinnamoroll (Sanrio)",
         imageURLs: [
             "images/cinnamoroll.gif",
-            "images/cinnamoroll.webp",
             "images/cinnamoroll2.gif"
         ]
     },
     5: { name: "Falin Touden (Dungeon Meshi)",
         imageURLs: [
             "images/falin.gif",
-            "images/falin.webp",
             "images/falin2.gif",
-            "images/falin2.webp"
         ]
     },
     6: { name: "Fionna the Human (Fionna and Cake)",
@@ -140,7 +147,6 @@ export const characterIdLookup = {
     },
     18: { name: "Pochitchi (Tomagotchi)",
         imageURLs: [
-            "images/pochitchi.webp",
             "images/pochitchi2.webp",
             "images/pochitchi3.webp",
             "images/pochitchi4.webp"
@@ -149,7 +155,7 @@ export const characterIdLookup = {
     19: { name: "Princess Bubblegum (Adventure Time)",
         imageURLs: [
             "images/princessbubblegum.gif",
-            "images/princessbubblegum.png"
+            "images/princessbubblegum3.gif"
         ]
     },
     20: { name: "PuppyCat (Bee and PuppyCat)",
@@ -162,13 +168,10 @@ export const characterIdLookup = {
         imageURLs: [
             "images/robloxseal.gif",
             "images/robloxseal.jpg",
-            "images/robloxseal.webp"
         ]
     },
     22: { name: "Saoirse Ronan (Ladybird & Lovely Bones)",
         imageURLs: [
-            "images/saoirseronanladybird.png",
-            "images/saoirseronanladybird2.png",
             "images/saoirseronanladybird3.png",
             "images/saoirseronanlovelybones.png"
         ]
@@ -176,8 +179,6 @@ export const characterIdLookup = {
     23: { name: "Saul Goodman (Better Call Saul)",
         imageURLs: [
             "images/saulgoodman.gif",
-            "images/saulgoodman.png",
-            "images/saulgoodman2.gif",
             "images/saulgoodman2.png"
         ]
     },
@@ -190,9 +191,6 @@ export const characterIdLookup = {
     25: { name: "Stella (Winx Club)",
         imageURLs: [
             "images/stella.gif",
-            "images/stella.jpg",
-            "images/stella.webp",
-            "images/stella2.gif",
             "images/stella2.jpg"
         ]
     },
@@ -201,6 +199,39 @@ export const characterIdLookup = {
             "images/twilightsparkle.png",
             "images/twilightsparkle.webp",
             "images/twilightsparkle2.webp"
+        ]
+    },
+    27: { name: "Espurr (Pokemon)",
+        imageURLs: [
+            "images/espurr.gif",
+            "images/espurr.png"
+        ]
+    },
+    28: { name: "Yoshi (Mario)",
+        imageURLs: [
+            "images/yoshi.gif",
+            "images/yoshi.jpg"
+        ]
+    },
+    29: { name: "Rhea Verie (June's OC!)",
+        imageURLs: [
+            "images/rhea.webp",
+            "images/rhea2.webp"
+        ]
+    },
+    30: { name: "Eowyn (LOTR)",
+        imageURLs: [
+            "images/eowyn.jpg"
+        ]
+    },
+    31: { name: "Starfire (DC Comics)",
+        imageURLs: [
+            "images/starfire.jpg"
+        ]
+    },
+    32: { name: "Bee (Bee and PuppyCat)",
+        imageURLs: [
+            "images/bee.jpg"
         ]
     }
 }
