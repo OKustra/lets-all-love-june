@@ -7,7 +7,7 @@ const messageContent = document.getElementById("message-content");
 const musicTab = document.getElementById("music-tab");
 const characterTab = document.getElementById("character-tab");
 const trackList = document.getElementById("track-list");
-const galleryColumns = document.querySelectorAll(".gallery-column");
+const gallery = document.getElementById("gallery");
 const coordDisplayEnabled = false;
 
 // Displays a dot's message in the message panel
@@ -57,54 +57,27 @@ function addCharacters(characterIds) {
         const characterName = characterIdLookup[id].name;
         const imageURLs = characterIdLookup[id].imageURLs;
 
+        shuffleArray(imageURLs);
+
         imageURLs.forEach(url => {
             const characterImg = document.createElement("img");
             characterImg.setAttribute("src", url);
             characterImg.setAttribute("title", characterName);
-            currentShortestColumn().appendChild(characterImg);
+            characterImg.classList.add("gallery-item");
+            gallery.appendChild(characterImg);
         });
     });
 }
 
-// Helper function to find current shortest column
-// DEBUG: Something is broken here. Images are not being put in the proper columns
-function currentShortestColumn() {
-    let shortestColumn = galleryColumns[0];
+// Shuffles an array's contents via Fisher-Yates shuffle
+function shuffleArray(array) {
+    let currentIndex = array.length;
 
-    galleryColumns.forEach(column => {
-        // DEBUG
-        console.log(`column: Column id, ${column.getAttribute("id")} ... height, ${getGalleryColumnHeight(column)}):`);
-        console.log(`shortestColumn: Column id, ${shortestColumn.getAttribute("id")} ... height, ${getGalleryColumnHeight(shortestColumn)}):`);
-
-        if (getGalleryColumnHeight(column) < getGalleryColumnHeight(shortestColumn)) { shortestColumn = column }
-
-        // DEBUG
-        console.log(`Post-if shortest column: ${shortestColumn.getAttribute("id")}`);
-        console.log("");
-    });
-
-    // DEBUG
-    console.log("currentShortestColumn returns:");
-    console.log(shortestColumn);
-    console.log("");
-    console.log("-----------------------------------------------------------------------------------");
-    console.log("");
-
-    return shortestColumn;
-}
-
-// Measure the height of a gallery column, even if it has no height, like with "display: none"
-// This works by cloning the element, measuring the clone, then deleting the clone
-function getGalleryColumnHeight(column) {
-    const clone = column.cloneNode(true);
-    clone.style.display = 'block';
-    clone.style.visibility = 'hidden';
-    clone.style.position = 'absolute';
-    clone.style.left = '-9999px';
-    document.body.appendChild(clone);
-    const height = clone.offsetHeight;
-    document.body.removeChild(clone);
-    return height;
+    while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
 }
 
 // Darken a hex color. Used for dot stroke color

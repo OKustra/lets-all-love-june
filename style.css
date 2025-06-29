@@ -39,16 +39,16 @@ html, body {
 }
 
 #gallery {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    column-count: 3;
+    column-gap: 5px;
+    padding: 10px;
 }
 
-.gallery-column {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 0;   /* flex box grows from 0 to fill up space */
+.gallery-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .hidden {
