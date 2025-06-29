@@ -209,7 +209,7 @@ export const characterIdLookup = {
     28: { name: "Yoshi (Mario)",
         imageURLs: [
             "images/yoshi.gif",
-            "images/yoshi.jpg"
+            "images/yoshi.png"
         ]
     },
     29: { name: "Rhea Verie (June's OC!)",
@@ -232,5 +232,11 @@ export const characterIdLookup = {
         imageURLs: [
             "images/bee.jpg"
         ]
-    }
+    },
+    33: { name: "Ember (Wrath of the Righteous)",
+        imageURLs: [
+            "images/ember.webp",
+            "images/ember2.webp"
+        ]
+    },
 }

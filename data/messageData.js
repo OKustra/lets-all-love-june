@@ -13,7 +13,8 @@ export const messages = [
     "message": "i think weve been friends for almost a decade now. which is crazy to think about since we didnt go to school together. that being said youve done so much for me by just being my friend and supporting me when i needed it. i hope we can continue to be friends until one of us dies. also move to seattle already",
     "dotColor": "#581876",
     "coordinates": "181,263",
-    "songIds": 3
+    "songIds": 3,
+    "characterIds": 33
   },
   {
     "id": 3,
@@ -34,7 +35,7 @@ export const messages = [
   {
     "id": 5,
     "friendName": "Saraisa",
-    "message": "Muhahaha I wrote a poem, love you Junebug",
+    "message": "Muhahaha I wrote a poem, love you Junebug\n\nNote from Oliver: I have the link to the poem but it's last minute and I forgot to ask if I could display it publicly. Check back later! Sorry!!",
     "dotColor": "#DB7093",
     "coordinates": "265,428",
     "songIds": 5,
