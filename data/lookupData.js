@@ -196,7 +196,6 @@ export const characterIdLookup = {
     },
     26: { name: "Twilight Sparkle (My Little Pony)",
         imageURLs: [
-            "images/twilightsparkle.png",
             "images/twilightsparkle.webp",
             "images/twilightsparkle2.webp"
         ]
