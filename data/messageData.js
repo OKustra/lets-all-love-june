@@ -180,7 +180,7 @@ export const messages = [
     "friendName": "Logsto",
     "message": "At some point while speaking to you and listening to you talk among us, I was very surprised by how genuine and kind you came across to me. Then after a while... I was hit by a freight train. I don't remember what it was that you said, but I swear I had whiplash. I was consistently caught off guard by the things you said. I never knew how to respond, but I can say I learned something new, multiple times. I do miss you guys. Thanks again for inviting me to friends giving. I hope you birthday turns out well.\n\nHappy Birthday, June.",
     "dotColor": "#E95420",
-    "coordinates": "422,383",
+    "coordinates": "430,392",
     "songIds": 19,
     "characterIds": 16
   },
@@ -206,7 +206,7 @@ export const messages = [
     "friendName": "Darby",
     "message": "June seems like the sort of person that everyone is better off for meeting. They have been warm and kind and delightful to be around in all my interactions with them. I hope they have a wonderful birthday!!!",
     "dotColor": "#ce0239",
-    "coordinates": "430,392"
+    "coordinates": "422,383"
   },
   {
     "id": 26,
@@ -267,5 +267,68 @@ export const messages = [
     "message": "Happy birthday!!! I cannot believe how long we’ve been friends, and I’m so thankful for how you’ve invited me into your awesome community with all of your amazing friends, how you’re always willing to listen to me vent and give me advice and encouragement. I can’t explain how much I appreciate just understanding and empathizing with how random obscure (or stupid) things can be really difficult for me, but you are still able to be honest and call me on my bullshit in a way that doesn't make me feel super judged. I am so so so glad we met. You are one of, if not the most supportive person I have ever met, I am so grateful, and so proud to call you my friend. Love you\n\nPS idc if you have or haven’t moved to arizona by the time the stadium is open WE HAVE TO GO TO A GAME AT THE NEW MLB BALLPARK IN LAS VEGAS WHEN IT’S OPEN I’M TAKING YOU AN OLIVER AND YOU GUYS CAN’T SAY NO",
     "dotColor": "#9820C5",
     "coordinates": "444,299"
-  }
+  },
+  {
+    "id": 34,
+    "friendName": "Audy",
+    "message": "Happy Birthday June! I know it's been rough lately but I think 25 is going to be a great year. I hope it's full of new memories with friends, quality time with animals, great movies, d&d adventures, art of your favorite characters, silly games, delicious food, and adventures with Oliver.",
+    "dotColor": "#d62b51",
+    "coordinates": "292,432"
+  },
+  {
+    "id": 35,
+    "friendName": "Justin F",
+    "message": "Hi summer! I wish you a happy birthday! Sorry you’ve been so down lately. Maybe we can try a d&d or pathfinder campaign sometime in the near future. Anyway, have a fun birthday. Stay cool (in both meanings) ",
+    "dotColor": "#ef8909",
+    "coordinates": "406,370"
+  },
+  {
+    "id": 36,
+    "friendName": "Andy",
+    "message": "Happy birthday June!!!!!!! You have been such a great friend to me for the past couple years and Ive enjoyed our little tea sessions :D",
+    "dotColor": "#681993",
+    "coordinates": "394,377"
+  },
+  {
+    "id": 37,
+    "friendName": "Travioli aka Doctor Scrange aka Meechiolio aka Meech aka Travi aka me",
+    "message": "Hi June!!! Habby Birthdayyy I hope its a really special one :D Thank you for existing and being one of my closest friends and always planning awesome trips or parties <3 You are the best I can't wait to see you! <3",
+    "dotColor": "#fbdaa6",
+    "coordinates": "278,429"
+  },
+  {
+    "id": 38,
+    "friendName": "Pingy",
+    "message": "HI BESTIE... Happy birthday I am so grateful you are my friend and so grateful you are on this earth!!! You are a source of comfort in hard times and a fun friend in good times. I hope your birthday is absolutely awesome and I hope you party rock like crazy. Take a shot for the slime squad #slimerforlife #slimesquad4ever noot noot",
+    "dotColor": "#9506db",
+    "coordinates": "525,323"
+  },
+  {
+    "id": 39,
+    "friendName": "Avery",
+    "message": "Hi June! Happy Birthday!! I hope you’re doing good! We miss you!! It is such an honor to know you and to be a friend of yours 💛 you are a really wonderful person 💖🪲",
+    "dotColor": "#24E7C1",
+    "coordinates": "413,395"
+  },
+  {
+    "id": 40,
+    "friendName": "August",
+    "message": "Happy birthday Junebug! You are one of my best friends and I feel so lucky to have met and connected with you. You were my first new friend I made as an adult that stuck. I hope you know how much of a positive impact you have on the people around you. To be cared about by you is a privilege. Thank you for being so thoughtful and dedicated. I love you and hope you have a wonderful day and year!",
+    "dotColor": "#668851",
+    "coordinates": "408,384"
+  },
+  {
+    "id": 41,
+    "friendName": "Oliver 🦝",
+    "message": "Hello Love,\n\nSince we have moved to Vegas I have seen you struggle with feelings of isolation and disconnection. I started this project to help you remember that your friends all over the country and beyond love and care about you. I probably could have just sent you a collage or something similar but I want to believe the visual representation of seeing where your friends are, and the colors they represent, have a meaning beyond that which could be conveyed with a slideshow.\n\nI hope this idea is conveyed to you in the way I originally envisioned. And I hope that my effort and love, along with the love of everyone who contributed, is reflected here. Even though I would have liked to do a lot more with this web page lol. There was even more in each response that I wish I could have fully included in this project. I have been provided with half-decade old videos from iCloud, funny memes, recipes, book recommendations, and more that people want to share with you. I can't wait to show you all of it.\n\nYou are the most incredible person I have ever met. I am grateful every day for the ways you support me. You have the kind of magnetic personality that draws people to you. And I am grateful for all the wonderful connections and rich friendships you have helped me to foster. I want you to know that we are not alone in Vegas. Love is truly all around you, and I want you to see the way our friends and I see you.\n\nHappy Birthday, June. I love you more than yesterday and less than tomorrow, and I can't wait to spend the rest of my life with you. <3\n\nP.S. Hope you like the cake!",
+    "dotColor": "#699B72",
+    "coordinates": "243,404"
+  },
+  {
+    "id": 42,
+    "friendName": "Courtney",
+    "message": "Happy Birthday to the sweetest and sassiest sister-in-law! Somehow, you manage to keep my brother in line - and honestly, that deserves its own award 😂\n\nHope your day is filled with love, laughter, and lots of cake!",
+    "dotColor": "#ffa9d2",
+    "coordinates": "236,392"
+  },
 ]

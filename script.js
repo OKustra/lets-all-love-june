@@ -9,7 +9,7 @@ const musicTab = document.getElementById("music-tab");
 const characterTab = document.getElementById("character-tab");
 const trackList = document.getElementById("track-list");
 const gallery = document.getElementById("gallery");
-const coordDisplayEnabled = false;
+const coordDisplayEnabled = true;
 
 // Displays a dot's message in the message panel
 function displayMessage(messageDot) {
