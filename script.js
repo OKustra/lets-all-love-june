@@ -3,6 +3,7 @@ import { songIdToName } from "./data/lookupData.js";
 import { characterIdLookup } from "./data/lookupData.js";
 
 const messageMap = document.getElementById("message-map");
+const messageTab = document.getElementById("message-tab");
 const messageContent = document.getElementById("message-content");
 const musicTab = document.getElementById("music-tab");
 const characterTab = document.getElementById("character-tab");
@@ -23,11 +24,29 @@ function displayMessage(messageDot) {
     // On first click, read songIds from dataset if they exist, then add each to a notification that songs have been collected
     if (messageDot.dataset.previouslyClicked == "false") {
         if (messageDot.dataset.songIds) {
-        compiledMessage += `<br><br><span id="recommended-songs">Music added to collection!`
+        compiledMessage += `<br><br><span class="extra-text">Music added to collection!`
 
         const friendSongs = messageDot.dataset.songIds.split(","); // Transforms data into iterable array
+        shuffleArray(friendSongs);
+
         friendSongs.forEach(songId => {
             compiledMessage += `<br><i>${songIdToName[songId]}</i>`
+        });
+
+        compiledMessage += `</span>`
+        }
+    }
+
+    // On first click, read characterIds from dataset if they exist, then add each to a notification that images have been collected
+    if (messageDot.dataset.previouslyClicked == "false") {
+        if (messageDot.dataset.characterIds) {
+        compiledMessage += `<br><br><span class="extra-text">Characters added to gallery!`
+
+        const friendCharacters = messageDot.dataset.characterIds.split(","); // Transforms data into iterable array
+        shuffleArray(friendCharacters);
+
+        friendCharacters.forEach(characterId => {
+            compiledMessage += `<br><i>${characterIdLookup[characterId].name}</i>`
         });
 
         compiledMessage += `</span>`
@@ -88,6 +107,17 @@ function darkenHexColor(hex, factor = 0.7) {
     const b = Math.floor(parseInt(hex.substr(5,2),16) * factor);
     const toHex = v => v.toString(16).padStart(2, '0');
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+// Deactivate all tabs and panel content, activate message tab and content
+function resetActivation() {
+    // Remove active from all tabs and panes
+    document.querySelectorAll("#side-tabs .tab").forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll("#tab-content-container .tab-content").forEach(pane => pane.classList.remove("active"));
+
+    // Activate message tab and content pane
+    messageTab.classList.add("active");
+    messageContent.classList.add("active");
 }
 
 // Display messageMap's coordinates under the mouse cursor and allow copying them to clipboard
@@ -151,16 +181,23 @@ messages.forEach(msg => {
         // Add song(s) from dot's dataset
         if ((dot.dataset.previouslyClicked == "false") && (dot.dataset.songIds)) {
             const songList = dot.dataset.songIds.split(",");
+            shuffleArray(songList);
+
             addSongs(songList);
         }
         // Add character(s) from dot's dataset
         if ((dot.dataset.previouslyClicked == "false") && (dot.dataset.characterIds)) {
             const characterList = dot.dataset.characterIds.split(",");
+            shuffleArray(characterList);
+
             addCharacters(characterList);
         }
         // Mark the dot as clicked for future logic and to avoid duplicates
         dot.dataset.previouslyClicked = "true";
         dot.classList.remove("unclicked");
+
+        // Reset tab and panel activation to Message tab and Message content respectively
+        resetActivation();
     });
 
     // Append the dot to the message map

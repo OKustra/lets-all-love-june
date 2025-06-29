@@ -132,7 +132,7 @@ html, body {
     font-weight: bold;
 }
 
-#recommended-songs {
+.extra-text {
     color: #262626;
     opacity: 40%;
 }
