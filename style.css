@@ -1,0 +1,155 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f6f9ff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.land {
+    stroke-width: 0.5px;
+    vector-effect: non-scaling-stroke;
+    stroke: #262626;
+    fill: #eef1f6;
+}
+
+.message-dot {
+    r: 5;
+    stroke-width: 1;
+    cursor: pointer;
+    transition: fill 0.5s, stroke 0.5s;
+}
+
+.message-dot.unclicked {
+    fill: rgb(191, 198, 212);
+    stroke: rgb(86, 90, 97);
+}
+
+.tab-content {
+    display: none;
+    padding: 24px;
+    width: auto;
+    font-size: 1.1em;
+    color: #262626;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#gallery {
+    column-count: 3;
+    column-gap: 5px;
+    padding: 10px;
+}
+
+.gallery-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#coord-display {
+    position: fixed;
+    background: white;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    padding: 4px 8px;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#coord-display.copied {
+    border-color: limegreen;
+}
+
+#main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#map-container {
+    display: flex;
+    flex: 1 1 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#side-panel {
+    display: flex;
+    flex: 1 1 30vw;
+    min-width: 200px;
+    background: #eef1f6;
+    border-left: 1px solid;
+    border-color: #262626;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#message-map {
+    height: 100%;
+    width: 100%;
+}
+
+#side-tabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    background: #e0e7f3;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+#tab-content-container {
+    width: 100%;
+}
+
+#side-tabs .tab {
+    flex: 1 1 0;
+    padding: 12px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, border-bottom 0.2s;
+}
+
+#side-tabs .tab.active {
+    border-bottom: 2px solid #262626;
+    background: #f6f9ff;
+    font-weight: bold;
+}
+
+.extra-text {
+    color: #262626;
+    opacity: 40%;
+}
+
+@media (orientation: portrait) {
+    #main-layout {
+        flex-direction: column;
+    }
+
+    #side-panel {
+        flex: 0 1 40vh;
+        border-left: none;
+        border-top: 1px solid;
+    }
+
+    .message-dot {
+        r: 10;
+        stroke-width: 2;
+    }
+}
